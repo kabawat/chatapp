@@ -1,0 +1,37 @@
+/* font-family: 'Lora', serif; */
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&display=swap');
+/*font-family: 'Work Sans', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+/* font-family: 'Nanum Gothic', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.container {
+  min-width: 100%;
+  background: #fff;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+
+.chatApp {
+  max-width: 100%;
+  margin: auto;
+  position: relative;
+  max-height: 100vh;
+  overflow: hidden;
+  min-height: 100vh;
+  overflow-y: auto;
+  background: #fff;
+  overflow-x: hidden;
+}
