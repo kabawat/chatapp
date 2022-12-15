@@ -10,6 +10,8 @@ const SignUp = () => {
         username: '',
         password: ''
     })
+
+
     const loginHandaler = (event) => {
         const { name, value } = event.target
         SetLoginData({
@@ -22,6 +24,7 @@ const SignUp = () => {
         user: 'f_row',
         pwd: 'f_row'
     })
+
     // Login Username Handale 
     const UserNameHandalBlur = (event) => {
         if (event.target.value !== '') {
@@ -36,6 +39,7 @@ const SignUp = () => {
             })
         }
     }
+
     const UserNameHandalFocus = () => {
         SetLoginCls({
             ...loginCls,
@@ -57,56 +61,74 @@ const SignUp = () => {
             })
         }
     }
+
     const loginPwdHandalFocus = () => {
         SetLoginCls({
             ...loginCls,
             pwd: 'f_row last focus'
         })
     }
+
     // login submit handal 
     const [loginValid, SetLoginValid] = useState(false)
-    const loginHandal = (event) => {
+    const loginHandal = async (event) => {
         const { username, password } = loginData
         event.preventDefault()
-        if (username == '' && password == '') {
-            SetLoginCls({
-                user: 'f_row last shake',
-                pwd: 'f_row last shake'
+        if (username !== '' && password !== '') {
+            await axios({
+                url: 'http://localhost:2917/login',
+                method: 'post',
+                data: loginData,
+                headers: {},
+                withCredentials: {},
+                credentials: 'same-origin'
+            }).then((result) => {
+                console.log(result);
+                SetLoginValid(true)
+                setTimeout(() => {
+                }, 1000)
+
             })
-            setTimeout(() => {
-                SetLoginCls({
-                    user: 'f_row last',
-                    pwd: 'f_row last'
-                })
-            }, 300);
-        } else if (password == '') {
-            SetLoginCls({
-                ...loginCls,
-                pwd: 'f_row last shake'
-            })
-            setTimeout(() => {
-                SetLoginCls({
-                    ...loginCls,
-                    pwd: 'f_row last'
-                })
-            }, 300);
-        } else if (username == '') {
-            SetLoginCls({
-                ...loginCls,
-                user: 'f_row last shake'
-            })
-            setTimeout(() => {
-                SetLoginCls({
-                    ...loginCls,
-                    user: 'f_row last'
-                })
-            }, 300);
         } else {
-            console.log('done');
-            SetLoginValid(true)
+            if (password == '' && username == '') {
+                {
+                    SetLoginCls({
+                        user: 'f_row last shake',
+                        pwd: 'f_row last shake'
+                    })
+                    setTimeout(() => {
+                        SetLoginCls({
+                            user: 'f_row last',
+                            pwd: 'f_row last'
+                        })
+                    }, 300);
+
+                }
+            } else if (password == '') {
+                SetLoginCls({
+                    ...loginCls,
+                    pwd: 'f_row last shake'
+                })
+                setTimeout(() => {
+                    SetLoginCls({
+                        ...loginCls,
+                        pwd: 'f_row last'
+                    })
+                }, 300);
+            } else if (username == '') {
+                SetLoginCls({
+                    ...loginCls,
+                    user: 'f_row last shake'
+                })
+                setTimeout(() => {
+                    SetLoginCls({
+                        ...loginCls,
+                        user: 'f_row last'
+                    })
+                }, 300);
+            }
         }
     }
-
 
     // forget Password
     const [mainClass, SetMainClass] = useState('formBox level-login')
@@ -119,7 +141,6 @@ const SignUp = () => {
             SetMainClass('formBox level-login')
         }
     }
-
 
     const [ForgotCls, SetForgotCls] = useState('f_row last')
     const ResetBlurHandle = (event) => {

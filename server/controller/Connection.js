@@ -9,7 +9,7 @@ mongoose.connect(`mongodb+srv://${user}:${password}@cluster0.r8evqrf.mongodb.net
     console.log("connection success");
 })
 const SchemaModle = new mongoose.Schema({
-    username: {
+    user: {
         type: String,
         require,
     },

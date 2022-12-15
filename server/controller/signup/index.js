@@ -15,5 +15,4 @@ exports.SingUp = (req, res) => {
     } else {
         res.send('invalid credentials')
     }
-    // ChatAppModle.save()
 }
