@@ -8,9 +8,13 @@ exports.Login = (req, res) => {
                 msg: 'user not found'
             })
         } else {
+            console.log(result);
             const privet_key = process.env.PRIVET_KEY
-            console.log(privet_key);
-            res.send(result)
+            const token = jwt.sign(req.body, privet_key, { expiresIn: '1d' })
+            res.cookie('authToken', token, {
+                httpOnly: true,
+                withCredentials: true
+            }).status(200).json({ user: req.body })
         }
     })
 }
