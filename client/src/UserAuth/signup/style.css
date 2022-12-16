@@ -2,7 +2,6 @@ html,
 body {
     background-color: #049081;
     font-family: sans-serif, Arial;
-    height: 100%;
     width: 100%;
 }
 
@@ -37,19 +36,15 @@ h6 {
     letter-spacing: 1px;
 }
 
-.container {
-    height: 100%;
-    width: 100%;
-    position: relative;
-    text-align: center;
-}
+.container {}
 
-.container:before {
-    content: '';
+.user_Auth {
+    position: relative;
+    width: 100%;
     height: 100%;
-    width: 0px;
-    display: inline-block;
-    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .formBox {
@@ -579,16 +574,11 @@ h6 {
     font-weight: bold;
     text-transform: uppercase;
     overflow: hidden;
-    position: relative;
     margin-left: auto;
     margin-right: auto;
 }
 
 .btn span {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-25%);
     width: 100%;
     height: 100%;
     color: #696969;

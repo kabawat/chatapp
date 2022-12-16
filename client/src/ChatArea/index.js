@@ -43,98 +43,120 @@ const IsChat = ({ curUser }) => {
         <div className='chat-area-inner'>
           <Msg clas={''} user_dp={curUser.img} msg={'hello'} />
           <Msg clas={'my-msg'} user_dp={user_01} msg={'hello'} />
+          <Msg clas={''} user_dp={curUser.img} msg={'hello'} />
+          <Msg clas={'my-msg'} user_dp={user_01} msg={'hello'} />
+          <Msg clas={''} user_dp={curUser.img} msg={'hello'} />
+          <Msg clas={'my-msg'} user_dp={user_01} msg={'hello'} />
+          <Msg clas={''} user_dp={curUser.img} msg={'hello'} />
+          <Msg clas={'my-msg'} user_dp={user_01} msg={'hello'} />
+          <Msg clas={''} user_dp={curUser.img} msg={'hello'} />
+          <Msg clas={'my-msg'} user_dp={user_01} msg={'hello'} />
+          <Msg clas={''} user_dp={curUser.img} msg={'hello'} />
+          <Msg clas={'my-msg'} user_dp={user_01} msg={'hello'} />
+          <Msg clas={''} user_dp={curUser.img} msg={'hello'} />
+          <Msg clas={'my-msg'} user_dp={user_01} msg={'hello'} />
+          <Msg clas={''} user_dp={curUser.img} msg={'hello'} />
+          <Msg clas={'my-msg'} user_dp={user_01} msg={'hello'} />
+          <Msg clas={''} user_dp={curUser.img} msg={'hello'} />
+          <Msg clas={'my-msg'} user_dp={user_01} msg={'hello'} />
+          <Msg clas={''} user_dp={curUser.img} msg={'hello'} />
+          <Msg clas={'my-msg'} user_dp={user_01} msg={'hello'} />
+          <Msg clas={''} user_dp={curUser.img} msg={'hello'} />
+          <Msg clas={'my-msg'} user_dp={user_01} msg={'hello'} />
+          <Msg clas={''} user_dp={curUser.img} msg={'hello'} />
+          <Msg clas={'my-msg'} user_dp={user_01} msg={'hello'} />
 
         </div>
-        <div className='chat-box-section'>
-          <div className='chat-box'>
-            <form>
-              <div
-                className={fileDoc ? 'file-contaienr active' : 'file-contaienr'}
-              >
-                <div className='file-share'>
-                  <div className='file-content'>
-                    <label htmlFor='image' className='file-icon'>
-                      <BiImageAdd />
-                    </label>
+      </div>
+      <div className='chat-box-section'>
+        <div className='chat-box'>
+          <form>
+            <div
+              className={fileDoc ? 'file-contaienr active' : 'file-contaienr'}
+            >
+              <div className='file-share'>
+                <div className='file-content'>
+                  <label htmlFor='image' className='file-icon'>
+                    <BiImageAdd />
+                  </label>
+                  <input
+                    type='file'
+                    className='file'
+                    name='image'
+                    id='image'
+                  />
+                  <div className='file-title'>Image</div>
+                </div>
+                <div className='file-content'>
+                  <label htmlFor='pdf' className='file-icon'>
+                    <FiFileText />
+                    <input type='file' name='pdf' id='pdf' className='file' />
+                  </label>
+                  <div className='file-title'>PDF</div>
+                </div>
+                <div className='file-content'>
+                  <label htmlFor='contect' className='file-icon'>
+                    <RiContactsLine />
                     <input
                       type='file'
+                      name='contect'
+                      id='contect'
                       className='file'
-                      name='image'
-                      id='image'
                     />
-                    <div className='file-title'>Image</div>
-                  </div>
-                  <div className='file-content'>
-                    <label htmlFor='pdf' className='file-icon'>
-                      <FiFileText />
-                      <input type='file' name='pdf' id='pdf' className='file' />
-                    </label>
-                    <div className='file-title'>PDF</div>
-                  </div>
-                  <div className='file-content'>
-                    <label htmlFor='contect' className='file-icon'>
-                      <RiContactsLine />
-                      <input
-                        type='file'
-                        name='contect'
-                        id='contect'
-                        className='file'
-                      />
-                    </label>
-                    <div className='file-title'>contect</div>
-                  </div>
-                  <div className='file-content'>
-                    <label htmlFor='location' className='file-icon'>
-                      <GrMapLocation />
-                      <input
-                        type='file'
-                        name='location'
-                        id='location'
-                        className='file'
-                      />
-                    </label>
-                    <div className='file-title'>Location</div>
-                  </div>
-                  <div className='file-content'>
-                    <label htmlFor='music' className='file-icon'>
-                      <HiOutlineMusicalNote />
-                      <input
-                        type='file'
-                        name='music'
-                        id='music'
-                        className='file'
-                      />
-                    </label>
-                    <div className='file-title'>Music</div>
-                  </div>
-                  <div className='file-content'>
-                    <label htmlFor='camera' className='file-icon'>
-                      <AiOutlineCamera />
-                      <input
-                        type='file'
-                        name='camera'
-                        id='camera'
-                        className='file'
-                      />
-                    </label>
-                    <div className='file-title'>Camera</div>
-                  </div>
+                  </label>
+                  <div className='file-title'>contect</div>
+                </div>
+                <div className='file-content'>
+                  <label htmlFor='location' className='file-icon'>
+                    <GrMapLocation />
+                    <input
+                      type='file'
+                      name='location'
+                      id='location'
+                      className='file'
+                    />
+                  </label>
+                  <div className='file-title'>Location</div>
+                </div>
+                <div className='file-content'>
+                  <label htmlFor='music' className='file-icon'>
+                    <HiOutlineMusicalNote />
+                    <input
+                      type='file'
+                      name='music'
+                      id='music'
+                      className='file'
+                    />
+                  </label>
+                  <div className='file-title'>Music</div>
+                </div>
+                <div className='file-content'>
+                  <label htmlFor='camera' className='file-icon'>
+                    <AiOutlineCamera />
+                    <input
+                      type='file'
+                      name='camera'
+                      id='camera'
+                      className='file'
+                    />
+                  </label>
+                  <div className='file-title'>Camera</div>
                 </div>
               </div>
-              <GrAdd
-                className={fileDoc ? 'icon1 active' : 'icon1'}
-                onClick={() => SetFileDoc(!fileDoc)}
-              />
-              <input
-                onChange={handleChange}
-                value={state}
-                type='text'
-                placeholder='Massage'
-                className='msg-box'
-              />
-              <FiSend className='icon2' />
-            </form>
-          </div>
+            </div>
+            <GrAdd
+              className={fileDoc ? 'icon1 active' : 'icon1'}
+              onClick={() => SetFileDoc(!fileDoc)}
+            />
+            <input
+              onChange={handleChange}
+              value={state}
+              type='text'
+              placeholder='Massage'
+              className='msg-box'
+            />
+            <FiSend className='icon2' />
+          </form>
         </div>
       </div>
     </>

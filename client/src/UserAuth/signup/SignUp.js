@@ -333,110 +333,112 @@ const SignUp = () => {
     }
 
     return (
-        <div><div className="container">
-            <div className={mainClass} >
-                <div className="box boxShaddow"></div>
-                <div className="box loginBox">
-                    <h2>LOGIN</h2>
-                    <form className="form" onSubmit={loginHandal}>
-                        <div className={loginCls.user}>
-                            <label>Username</label>
-                            <input type="text"
-                                className="input-field"
-                                name='username'
-                                value={loginData.username}
-                                onChange={loginHandaler}
-                                onBlur={UserNameHandalBlur}
-                                onFocus={UserNameHandalFocus} />
-                            <u></u>
-                        </div>
-                        <div className={loginCls.pwd}>
-                            <label>Password</label>
-                            <input type="password"
-                                className="input-field"
-                                name='password'
-                                value={loginData.password}
-                                onChange={loginHandaler}
-                                onBlur={loginPwdHandalBlur}
-                                onFocus={loginPwdHandalFocus} />
-                            <u></u>
-                        </div>
-                        <button className={loginValid ? "btn active" : "btn"}><span>GO</span><u></u>
-                            <FileDownloadDoneIcon />
+        <div className='container'>
+            <div className="user_Auth">
+                <div className={mainClass} >
+                    <div className="box boxShaddow"></div>
+                    <div className="box loginBox">
+                        <h2>LOGIN</h2>
+                        <form className="form" onSubmit={loginHandal}>
+                            <div className={loginCls.user}>
+                                <label>Username</label>
+                                <input type="text"
+                                    className="input-field"
+                                    name='username'
+                                    value={loginData.username}
+                                    onChange={loginHandaler}
+                                    onBlur={UserNameHandalBlur}
+                                    onFocus={UserNameHandalFocus} />
+                                <u></u>
+                            </div>
+                            <div className={loginCls.pwd}>
+                                <label>Password</label>
+                                <input type="password"
+                                    className="input-field"
+                                    name='password'
+                                    value={loginData.password}
+                                    onChange={loginHandaler}
+                                    onBlur={loginPwdHandalBlur}
+                                    onFocus={loginPwdHandalFocus} />
+                                <u></u>
+                            </div>
+                            <button className={loginValid ? "btn active" : "btn"}><span>GO</span><u></u>
+                                <FileDownloadDoneIcon />
+                            </button>
+                            <div className="f_link">
+                                <button className="resetTag" type='button' onClick={() => pwdForgot(true)}>Forgot your password?</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div className="box forgetbox">
+                        <button className="back icon-back" onClick={() => pwdForgot(false)}>
+                            <ArrowBackIcon />
                         </button>
-                        <div className="f_link">
-                            <button className="resetTag" type='button' onClick={() => pwdForgot(true)}>Forgot your password?</button>
-                        </div>
-                    </form>
-                </div>
-                <div className="box forgetbox">
-                    <button className="back icon-back" onClick={() => pwdForgot(false)}>
-                        <ArrowBackIcon />
+                        <h2>Reset Password</h2>
+                        <form className="form" onSubmit={ForgotHandal}>
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
+                            <div className={ForgotCls}>
+                                <label>Email Id</label>
+                                <input type="text"
+                                    className="input-field"
+                                    value={forgotEmail}
+                                    onChange={ForgotHandalChange}
+                                    onBlur={ResetBlurHandle}
+                                    onFocus={ResetFocusHandle}
+                                />
+                                <u></u>
+                            </div>
+                            <button className={ForgotDone ? "btn active" : "btn"}><span>Reset</span><u></u>
+                                <FileDownloadDoneIcon />
+                            </button>
+                        </form>
+                    </div>
+                    <div className="box registerBox">
+                        <span className="reg_bg"></span>
+                        <h2>Register</h2>
+                        <form className="form" onSubmit={RegHandleSubmit}>
+                            <div className={`${RegCls.user} f_row`}>
+                                <label>Username</label>
+                                <input type="text"
+                                    className="input-field"
+                                    name='user'
+                                    value={regHandal.user}
+                                    onChange={HandalRegChange}
+                                    onFocus={RegHandleFocus}
+                                    onBlur={RegHandleBlur} />
+                                <u></u>
+                            </div>
+                            <div className={`${RegCls.email} f_row`}>
+                                <label>Email</label>
+                                <input type="email"
+                                    className="input-field"
+                                    name='email'
+                                    value={regHandal.email}
+                                    onChange={HandalRegChange}
+                                    onFocus={RegHandleFocus}
+                                    onBlur={RegHandleBlur} />
+                                <u></u>
+                            </div>
+                            <div className={`${RegCls.pwd} f_row last`}>
+                                <label>Password</label>
+                                <input type="password"
+                                    className="input-field"
+                                    name='pwd'
+                                    value={regHandal.pwd}
+                                    onChange={HandalRegChange}
+                                    onFocus={RegHandleFocus}
+                                    onBlur={RegHandleBlur} />
+                                <u></u>
+                            </div>
+                            <button className={RegBtn ? "btn-large active" : "btn-large"}>NEXT</button>
+                        </form>
+                    </div>
+                    <button href="#" className="regTag icon-add" onClick={() => regTag(!regForm)}>
+                        <AddIcon />
                     </button>
-                    <h2>Reset Password</h2>
-                    <form className="form" onSubmit={ForgotHandal}>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
-                        <div className={ForgotCls}>
-                            <label>Email Id</label>
-                            <input type="text"
-                                className="input-field"
-                                value={forgotEmail}
-                                onChange={ForgotHandalChange}
-                                onBlur={ResetBlurHandle}
-                                onFocus={ResetFocusHandle}
-                            />
-                            <u></u>
-                        </div>
-                        <button className={ForgotDone ? "btn active" : "btn"}><span>Reset</span><u></u>
-                            <FileDownloadDoneIcon />
-                        </button>
-                    </form>
                 </div>
-                <div className="box registerBox">
-                    <span className="reg_bg"></span>
-                    <h2>Register</h2>
-                    <form className="form" onSubmit={RegHandleSubmit}>
-                        <div className={`${RegCls.user} f_row`}>
-                            <label>Username</label>
-                            <input type="text"
-                                className="input-field"
-                                name='user'
-                                value={regHandal.user}
-                                onChange={HandalRegChange}
-                                onFocus={RegHandleFocus}
-                                onBlur={RegHandleBlur} />
-                            <u></u>
-                        </div>
-                        <div className={`${RegCls.email} f_row`}>
-                            <label>Email</label>
-                            <input type="email"
-                                className="input-field"
-                                name='email'
-                                value={regHandal.email}
-                                onChange={HandalRegChange}
-                                onFocus={RegHandleFocus}
-                                onBlur={RegHandleBlur} />
-                            <u></u>
-                        </div>
-                        <div className={`${RegCls.pwd} f_row last`}>
-                            <label>Password</label>
-                            <input type="password"
-                                className="input-field"
-                                name='pwd'
-                                value={regHandal.pwd}
-                                onChange={HandalRegChange}
-                                onFocus={RegHandleFocus}
-                                onBlur={RegHandleBlur} />
-                            <u></u>
-                        </div>
-                        <button className={RegBtn ? "btn-large active" : "btn-large"}>NEXT</button>
-                    </form>
-                </div>
-                <button href="#" className="regTag icon-add" onClick={() => regTag(!regForm)}>
-                    <AddIcon />
-                </button>
-            </div>
-        </div ></div >
+            </div >
+        </div>
     )
 }
 
