@@ -26,6 +26,10 @@ a:active {
     outline: none;
 }
 
+.container {
+    position: relative;
+}
+
 .user_Auth {
     position: relative;
     width: 100%;
@@ -237,7 +241,7 @@ a:active {
     transition-delay: 0.25s;
 }
 
-.formBox .registerBox .btn-large {
+.formBox .registerBox .chat_btn-large {
     opacity: 0;
     transition: all 0.3s cubic-bezier(.48, .55, .69, .9);
     transform: translateX(20px);
@@ -286,12 +290,12 @@ a:active {
     margin-bottom: 40px;
 }
 
-.formBox .forgetbox .btn {
+.formBox .forgetbox .chat_btn {
     border-color: #7DC6DC;
     color: #7DC6DC;
 }
 
-.formBox .forgetbox .btn u {
+.formBox .forgetbox .chat_btn u {
     background-color: #7DC6DC;
 }
 
@@ -321,7 +325,7 @@ a:active {
     transition-delay: 0.2s;
 }
 
-.formBox .forgetbox .btn {
+.formBox .forgetbox .chat_btn {
     opacity: 0;
     transition: all 0.3s cubic-bezier(.48, .55, .69, .9);
     transform: translate(0px, 20px);
@@ -367,7 +371,7 @@ a:active {
 }
 
 .formBox.level-reg .form>div,
-.formBox.level-reg .btn-large,
+.formBox.level-reg .chat_btn-large,
 .formBox.level-reg h2 {
     visibility: visible;
     opacity: 1;
@@ -404,7 +408,7 @@ a:active {
 
 .formBox.level-forget .forgetbox p,
 .formBox.level-forget .forgetbox form>div,
-.formBox.level-forget .forgetbox .btn,
+.formBox.level-forget .forgetbox .chat_btn,
 .formBox.level-forget .forgetbox h2 {
     visibility: visible;
     opacity: 1;
@@ -547,7 +551,7 @@ a:active {
     }
 }
 
-.btn {
+.chat_btn {
     transition: all 0.6s ease;
     background-color: #fff;
     border: 3px solid #dfdfdf;
@@ -564,15 +568,20 @@ a:active {
     overflow: hidden;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
 }
 
-.btn span {
+.chat_btn span {
     width: 100%;
     height: 100%;
     color: #696969;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-.btn u {
+.chat_btn u {
     border-radius: 50%;
     background-color: #ed2553;
     position: absolute;
@@ -585,7 +594,7 @@ a:active {
     transform: scale(0);
 }
 
-.btn svg {
+.chat_btn svg {
     fill: #fff;
     width: 35px;
     height: 35px;
@@ -597,22 +606,22 @@ a:active {
     transform: translate(-50%, -50%) rotate(-90deg) skew(18deg, 12deg);
 }
 
-.btn.active,
-.btn:hover {
+.chat_btn.active,
+.chat_btn:hover {
     border-color: #ed2553;
     color: #ed2553;
 }
 
-.btn.active u {
+.chat_btn.active u {
     transform: scale(1);
 }
 
-.btn.active svg {
+.chat_btn.active svg {
     opacity: 1;
     transform: translate(-50%, -50%) rotate(0deg) skew(0deg, 0deg);
 }
 
-.btn-large {
+.chat_btn-large {
     transition: all 0.6s ease;
     background-color: #fff;
     border: 3px solid #fff;
@@ -629,8 +638,8 @@ a:active {
     position: relative;
 }
 
-.btn-large.active,
-.btn-large:hover {
+.chat_btn-large.active,
+.chat_btn-large:hover {
     background-color: #ed2553;
     border-color: #fff;
     color: #fff;

@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import ChatArea from './ChatArea'
 import UserArea from './UsersArea'
 import './style.css'
+import axios from 'axios'
 const ChatApp = () => {
+
   return (
     <div className='container'>
       <div className='chatApp'>

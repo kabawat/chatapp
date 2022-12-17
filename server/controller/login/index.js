@@ -12,9 +12,10 @@ exports.Login = (req, res) => {
             const privet_key = process.env.PRIVET_KEY
             const token = jwt.sign(req.body, privet_key, { expiresIn: '1d' })
             res.cookie('authToken', token, {
-                httpOnly: true,
-                withCredentials: true
-            }).status(200).json({ user: req.body })
+                httpOnly: false,
+                withCredentials: true,
+                secure: false
+            }).status(200).json({ user: result })
         }
     })
 }

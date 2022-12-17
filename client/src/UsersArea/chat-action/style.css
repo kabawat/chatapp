@@ -48,7 +48,7 @@
     box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
     font-size: 22px;
     background: #fff;
-    padding: 10px 10px 6px;
+    padding: 10px 10px 5px;
     border-radius: 50%;
     cursor: pointer;
 }
@@ -75,6 +75,10 @@
 .user-detaile {
     display: flex;
     align-items: center;
+}
+
+.user-detaile .user-dp {
+    margin-right: 10px;
 }
 
 .user-pic {
@@ -187,7 +191,7 @@
 .btn-success {
     background: #2f9eda;
     color: #fff;
-    padding: 8px 30px;
+    padding: 10px 30px;
     border-radius: 4px;
     font-size: 20px;
 }

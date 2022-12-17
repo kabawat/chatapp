@@ -1,6 +1,7 @@
 const dotenv = require('dotenv').config()
 const express = require('express')
 const cookiesParser = require('cookie-parser')
+const bodyParser = require('body-parser');
 const app = express()
 const port = process.env.PORT
 const cors = require('cors')
@@ -20,6 +21,7 @@ app.use(cors(corsOptions))
 app.use(express.urlencoded({ extends: true }))
 
 app.use(AuthController)
+app.use(bodyParser.json());
 app.listen(port, () => {
   console.log(`http://localhost:${port}`);
 })

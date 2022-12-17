@@ -362,7 +362,7 @@ const SignUp = () => {
                                     onFocus={loginPwdHandalFocus} />
                                 <u></u>
                             </div>
-                            <button className={loginValid ? "btn active" : "btn"}><span>GO</span><u></u>
+                            <button className={loginValid ? "chat_btn active" : "chat_btn"}><span>GO</span><u></u>
                                 <FileDownloadDoneIcon />
                             </button>
                             <div className="f_link">
@@ -388,7 +388,7 @@ const SignUp = () => {
                                 />
                                 <u></u>
                             </div>
-                            <button className={ForgotDone ? "btn active" : "btn"}><span>Reset</span><u></u>
+                            <button className={ForgotDone ? "chat_btn active" : "chat_btn"}><span>Reset</span><u></u>
                                 <FileDownloadDoneIcon />
                             </button>
                         </form>
@@ -430,7 +430,7 @@ const SignUp = () => {
                                     onBlur={RegHandleBlur} />
                                 <u></u>
                             </div>
-                            <button className={RegBtn ? "btn-large active" : "btn-large"}>NEXT</button>
+                            <button className={RegBtn ? "chat_btn-large active" : "chat_btn-large"}>NEXT</button>
                         </form>
                     </div>
                     <button href="#" className="regTag icon-add" onClick={() => regTag(!regForm)}>
