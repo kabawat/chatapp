@@ -7,8 +7,6 @@
     height: 100%;
     overflow: hidden;
     padding-left: 400px;
-    padding-top: 70px;
-    padding-bottom: 70px;
 }
 
 .ChatArea .header {
@@ -176,7 +174,7 @@
     bottom: 0px;
     background: #fff;
     width: 100%;
-    height: 8%;
+    height: 70px;
     place-items: center;
     padding: 0px 10px;
 }

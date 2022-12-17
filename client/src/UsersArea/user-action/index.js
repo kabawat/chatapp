@@ -3,7 +3,7 @@ import user from '../../Assets/user-dp/user2.jpeg'
 const UserAction = () => {
   return (
     <div className='UserAction'>
-      <div className='userInfo'>
+      <div className='user_Info'>
         <div className="user-dp">
           <img src={user} alt="" />
         </div>

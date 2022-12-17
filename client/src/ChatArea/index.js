@@ -20,7 +20,7 @@ const IsChat = ({ curUser }) => {
   }
   const [fileDoc, SetFileDoc] = useState(false)
   return (
-    <>
+    <div className='chat-contaienr'>
       <div className='header'>
         <div className='header-container'>
           <div className='user'>
@@ -159,7 +159,7 @@ const IsChat = ({ curUser }) => {
           </form>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 
