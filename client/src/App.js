@@ -8,31 +8,37 @@ const socket = io(URL)
 // socket.on('connect', () => {
 //   console.log(socket.id);
 // })
-const createConnection = (socketAction) => {
-    socket.on('connect', () => {
-        console.log(socket.id);
-        socketAction()
-    })
+const createConnection = socketAction => {
+  socket.on('connect', () => {
+    console.log(socket.id)
+    socketAction()
+  })
 }
-// my app 
+// my app
 
 export const ContextAPI = createContext()
 const App = () => {
-    useEffect(() => {
-        const verify = async () => {
-            const result = await axios.get('http://localhost:2917/privat-router')
-            console.log(await result);
+  useEffect(() => {
+    const verify = async () => {
+      const result = await axios({
+        method: 'get',
+        url: 'http://localhost:2917/privat-router',
+        headers: {
+          'Content-Type': 'application/json'
         }
-        verify()
-    })
-    const parser = { createConnection, socket }
-    return (
-        <>
-            <ContextAPI.Provider value={parser}>
-                {/* <ChatApp /> */}
-                < UserAuthentication />
-            </ContextAPI.Provider>
-        </>
-    )
+      })
+      console.log(await result)
+    }
+    verify()
+  })
+  const parser = { createConnection, socket }
+  return (
+    <>
+      <ContextAPI.Provider value={parser}>
+        {/* <ChatApp /> */}
+        <UserAuthentication />
+      </ContextAPI.Provider>
+    </>
+  )
 }
 export default App
